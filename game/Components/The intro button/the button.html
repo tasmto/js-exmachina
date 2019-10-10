@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Test for Js ex-machina</title>
+
+    <style>
+
+        .container{
+
+        }
+        .the_button{
+            background: #56CCF2;
+            border: none;
+            padding: 10px 20px;
+            color: white;
+            font-family: Press Start 2P;
+            font-style: normal;
+            font-weight: normal;
+            font-size: 18px;
+            line-height: 18px;
+            position: relative;
+        }
+        .the_button::after, .the_button::before{
+            position: absolute;
+            content: "";
+            display: block;
+            background: rgb(255, 255, 255);
+            width: 20px;
+            height: 20px;
+        }
+
+        .the_button::after{
+            left: 91.86%;
+            right: 0%;
+            top: 7.61%;
+            bottom: 57.58%;
+        }
+        .the_button::before{
+            left: 88.24%;
+            right: 3.62%;
+            top: 0%;
+            bottom: 73.18%;
+        }
+
+
+
+        .the_button > img{
+            margin-left: 10px;
+        }
+    
+    </style>
+</head>
+<body>
+    
+    ,<div class="container">
+        <button class="the_button">Lets Go!!! <img src="icon.png" alt=""></button>
+    </div>
+
+
+    <script>
+    
+    
+    
+    
+    </script>
+</body>
+</html>
