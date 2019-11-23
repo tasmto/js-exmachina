@@ -2,9 +2,11 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
+    <title>Ex-Machina</title>
+    <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>Test for Js ex-machina</title>
+    <link href="style.css" rel="stylesheet" type="text/css">
 
     <style>
 
@@ -44,24 +46,41 @@
         }
 
 
+
         .the_button > img{
             margin-left: 10px;
         }
 
     </style>
+
 </head>
 <body>
-    
-    ,<div class="container">
-        <button class="the_button">Lets Go!!! <img src="icon.png" alt=""></button>
-    </div>
 
+<h1>Press Play</h1>
+<h2>or not... whatever bruh</h2>
 
-    <script>
-    
-    
-    
-    
-    </script>
+<div class="container">
+<button onclick="typeWriter()" class="the_button">Let's Go!!!</button>
+</div>
+
+<p id="text"></p>
+<script>
+    var i = 0;
+    var txt = `Whoops, the action is wrong. Can you help me fix it?`;
+    var speed = 50;
+
+    function typeWriter() {
+        if (i < txt.length) {
+            document.getElementById("text").innerHTML += txt.charAt(i);
+            i++;
+            setTimeout(typeWriter, speed);
+        }
+    }
+</script>
+
+<img src="example 1.gif" height="608" width="1080"/>
+
 </body>
+
+<footer id="footer">Copyright 2019 | Made by tasmoto, liv and zano</footer>
 </html>
