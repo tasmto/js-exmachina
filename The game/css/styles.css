@@ -1,0 +1,97 @@
+* {
+    box-sizing: border-box;
+}
+
+body {
+    background-color: #88C6DA;
+linear-gradient(300.18 deg, #93D5EA 11.02 %, rgba(187, 238, 255, 0) 87.91 %);
+    font-family: "Press Start 2P", sans-serif !important;
+    font-size: 9.2px;
+    margin: 0;
+}
+
+.fade_to_black {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background: black;
+    z-index: 100;
+    animation: fadeInFromBlack 3s ease forwards;
+}
+
+@keyframes fadeInFromBlack {
+    0% {
+        opacity: 1;
+    }
+    100% {
+        opacity: 0;
+    }
+}
+
+
+/*THE IMAGE DISPLAY AREA*/
+#story-image-container {
+    background-color: lightgrey;
+    top: 15%;
+    width: 350px;
+    height: 340px;
+    border: 10px solid #ffffff;
+    left: 50%;
+    transform: translateX(-50%);
+    position: absolute;
+}
+
+
+#story-image-container img {
+    width: 100%;
+    height: 100%;
+    /*THIS WILL MAKE THE IMAGE SCALE UP PROPERLY WHILE STILL BEING PIXELIZED*/
+    image-rendering: auto;
+    image-rendering: crisp-edges;
+    image-rendering: pixelated;
+}
+
+
+/*THE TYPE WRITTER EFFECT*/
+div.typewriter {
+    position: absolute;
+    left: 50%;
+    bottom: 10px;
+    transform: translateX(-50%);
+    z-index: 1000;
+    width: 700px;
+    height: 120px;
+    background: #ffffff;
+    border-radius: 33px;
+    opacity: 0.90;
+    filter: alpha(opacity=90);
+    color: #808080;
+}
+
+.typewritter--inner {
+    position: relative;
+    height: 100%;
+    width: 100%;
+    padding: 10px 35px;
+}
+
+.continue-btn--container {
+    position: absolute;
+    bottom: 20px;
+    right: 35px;
+}
+
+.typewritter--inner {
+    line-height: 20px;
+}
+
+.continue-btn--container > .continue {
+    display: flex;
+    justify-content: flex-end;
+    text-decoration: none;
+    color: #505050;
+}
+
+.continue-btn--container > .continue:hover {
+    color: #0402ff;
+}

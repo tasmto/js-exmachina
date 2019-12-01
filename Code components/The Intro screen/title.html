@@ -1,0 +1,235 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Js-exmachina</title>
+</head>
+<style>
+    /*DELETE THIS START*/
+    body {
+        width: 100vw;
+        height: 100vh;
+        margin: 0;
+    }
+
+    /*DELETE THIS END*/
+
+    #game-controls{
+        position: fixed;
+        top: 2%;
+        right: 2%;
+    } 
+    #game-controls > svg{
+    }
+
+    #soundtrack{
+
+    }
+    
+    .title-screen-container-outer {
+        background: linear-gradient(300.18deg, #93D5EA 11.02%, rgba(187, 238, 255, 0) 87.91%), #88C6DA;
+        height: 100%;
+        width: 100%;
+    }
+
+    .title-screen-container-inner {
+        margin: auto;
+        background: url(images/js-ex-machina-title-screen-repeating-pattern.png);
+        background-repeat: repeat 0 0;
+        margin: 0;
+        text-align: center;
+        height: 100vh;
+
+        width: 100%;
+        display: grid;
+        justify-items: center;
+        align-content: center;
+        animation: slide 120s forwards linear infinite;
+    }
+
+    @keyframes slide {
+        from {
+            background-position: 0 0;
+            background-size: 20%;
+        }
+
+        to {
+            background-position: -2000px -2000px;
+            background-size: 25%;
+        }
+    }
+
+    .title-screen-container-inner .card {}
+
+    .title-screen-container-inner .card img {
+        width: auto;
+        height: 450px;
+    }
+</style>
+
+<script defer>
+
+(function () {
+    const gameControls = document.getElementById('game-controls');
+    console.log(gameControls);
+   
+
+})
+
+var name = prompt('What is your name');
+alert('Hi ' + name);
+
+</script>
+
+<body>
+    <div id="game-controls">
+        <?xml version="1.0" encoding="UTF-8" ?>
+        <svg version="1.1" width="56" height="56" xmlns="http://www.w3.org/2000/svg">
+            <rect x="24" y="33" width="1" height="1" fill="#D9A066" />
+            <rect x="31" y="20" width="1" height="1" fill="#D9A066" />
+            <rect x="30" y="21" width="1" height="1" fill="#D9A066" />
+            <rect x="29" y="22" width="1" height="1" fill="#D9A066" />
+            <rect x="25" y="31" width="1" height="1" fill="#D9A066" />
+            <rect x="24" y="32" width="1" height="1" fill="#D9A066" />
+            <rect x="26" y="32" width="1" height="1" fill="#D9A066" />
+            <rect x="30" y="19" width="1" height="1" fill="#222034" />
+            <rect x="31" y="19" width="1" height="1" fill="#222034" />
+            <rect x="32" y="19" width="1" height="1" fill="#222034" />
+            <rect x="29" y="20" width="1" height="1" fill="#222034" />
+            <rect x="30" y="20" width="1" height="1" fill="#222034" />
+            <rect x="32" y="20" width="1" height="1" fill="#222034" />
+            <rect x="33" y="20" width="1" height="1" fill="#222034" />
+            <rect x="34" y="20" width="1" height="1" fill="#222034" />
+            <rect x="28" y="21" width="1" height="1" fill="#222034" />
+            <rect x="29" y="21" width="1" height="1" fill="#222034" />
+            <rect x="31" y="21" width="1" height="1" fill="#222034" />
+            <rect x="32" y="21" width="1" height="1" fill="#222034" />
+            <rect x="33" y="21" width="1" height="1" fill="#222034" />
+            <rect x="34" y="21" width="1" height="1" fill="#222034" />
+            <rect x="35" y="21" width="1" height="1" fill="#222034" />
+            <rect x="36" y="21" width="1" height="1" fill="#222034" />
+            <rect x="37" y="21" width="1" height="1" fill="#222034" />
+            <rect x="27" y="22" width="1" height="1" fill="#222034" />
+            <rect x="28" y="22" width="1" height="1" fill="#222034" />
+            <rect x="30" y="22" width="1" height="1" fill="#222034" />
+            <rect x="31" y="22" width="1" height="1" fill="#222034" />
+            <rect x="32" y="22" width="1" height="1" fill="#222034" />
+            <rect x="33" y="22" width="1" height="1" fill="#222034" />
+            <rect x="34" y="22" width="1" height="1" fill="#222034" />
+            <rect x="35" y="22" width="1" height="1" fill="#222034" />
+            <rect x="36" y="22" width="1" height="1" fill="#222034" />
+            <rect x="37" y="22" width="1" height="1" fill="#222034" />
+            <rect x="38" y="22" width="1" height="1" fill="#222034" />
+            <rect x="27" y="23" width="1" height="1" fill="#222034" />
+            <rect x="28" y="23" width="1" height="1" fill="#222034" />
+            <rect x="29" y="23" width="1" height="1" fill="#222034" />
+            <rect x="30" y="23" width="1" height="1" fill="#222034" />
+            <rect x="31" y="23" width="1" height="1" fill="#222034" />
+            <rect x="32" y="23" width="1" height="1" fill="#222034" />
+            <rect x="33" y="23" width="1" height="1" fill="#222034" />
+            <rect x="34" y="23" width="1" height="1" fill="#222034" />
+            <rect x="35" y="23" width="1" height="1" fill="#222034" />
+            <rect x="36" y="23" width="1" height="1" fill="#222034" />
+            <rect x="37" y="23" width="1" height="1" fill="#222034" />
+            <rect x="38" y="23" width="1" height="1" fill="#222034" />
+            <rect x="39" y="23" width="1" height="1" fill="#222034" />
+            <rect x="27" y="24" width="1" height="1" fill="#222034" />
+            <rect x="28" y="24" width="1" height="1" fill="#222034" />
+            <rect x="29" y="24" width="1" height="1" fill="#222034" />
+            <rect x="30" y="24" width="1" height="1" fill="#222034" />
+            <rect x="31" y="24" width="1" height="1" fill="#222034" />
+            <rect x="33" y="24" width="1" height="1" fill="#222034" />
+            <rect x="34" y="24" width="1" height="1" fill="#222034" />
+            <rect x="35" y="24" width="1" height="1" fill="#222034" />
+            <rect x="36" y="24" width="1" height="1" fill="#222034" />
+            <rect x="37" y="24" width="1" height="1" fill="#222034" />
+            <rect x="38" y="24" width="1" height="1" fill="#222034" />
+            <rect x="27" y="25" width="1" height="1" fill="#222034" />
+            <rect x="28" y="25" width="1" height="1" fill="#222034" />
+            <rect x="29" y="25" width="1" height="1" fill="#222034" />
+            <rect x="30" y="25" width="1" height="1" fill="#222034" />
+            <rect x="34" y="25" width="1" height="1" fill="#222034" />
+            <rect x="35" y="25" width="1" height="1" fill="#222034" />
+            <rect x="36" y="25" width="1" height="1" fill="#222034" />
+            <rect x="37" y="25" width="1" height="1" fill="#222034" />
+            <rect x="27" y="26" width="1" height="1" fill="#222034" />
+            <rect x="28" y="26" width="1" height="1" fill="#222034" />
+            <rect x="29" y="26" width="1" height="1" fill="#222034" />
+            <rect x="30" y="26" width="1" height="1" fill="#222034" />
+            <rect x="27" y="27" width="1" height="1" fill="#222034" />
+            <rect x="28" y="27" width="1" height="1" fill="#222034" />
+            <rect x="29" y="27" width="1" height="1" fill="#222034" />
+            <rect x="30" y="27" width="1" height="1" fill="#222034" />
+            <rect x="27" y="28" width="1" height="1" fill="#222034" />
+            <rect x="28" y="28" width="1" height="1" fill="#222034" />
+            <rect x="29" y="28" width="1" height="1" fill="#222034" />
+            <rect x="30" y="28" width="1" height="1" fill="#222034" />
+            <rect x="27" y="29" width="1" height="1" fill="#222034" />
+            <rect x="28" y="29" width="1" height="1" fill="#222034" />
+            <rect x="29" y="29" width="1" height="1" fill="#222034" />
+            <rect x="30" y="29" width="1" height="1" fill="#222034" />
+            <rect x="24" y="30" width="1" height="1" fill="#222034" />
+            <rect x="25" y="30" width="1" height="1" fill="#222034" />
+            <rect x="27" y="30" width="1" height="1" fill="#222034" />
+            <rect x="28" y="30" width="1" height="1" fill="#222034" />
+            <rect x="29" y="30" width="1" height="1" fill="#222034" />
+            <rect x="30" y="30" width="1" height="1" fill="#222034" />
+            <rect x="23" y="31" width="1" height="1" fill="#222034" />
+            <rect x="24" y="31" width="1" height="1" fill="#222034" />
+            <rect x="26" y="31" width="1" height="1" fill="#222034" />
+            <rect x="27" y="31" width="1" height="1" fill="#222034" />
+            <rect x="28" y="31" width="1" height="1" fill="#222034" />
+            <rect x="29" y="31" width="1" height="1" fill="#222034" />
+            <rect x="30" y="31" width="1" height="1" fill="#222034" />
+            <rect x="22" y="32" width="1" height="1" fill="#222034" />
+            <rect x="23" y="32" width="1" height="1" fill="#222034" />
+            <rect x="25" y="32" width="1" height="1" fill="#222034" />
+            <rect x="27" y="32" width="1" height="1" fill="#222034" />
+            <rect x="28" y="32" width="1" height="1" fill="#222034" />
+            <rect x="29" y="32" width="1" height="1" fill="#222034" />
+            <rect x="30" y="32" width="1" height="1" fill="#222034" />
+            <rect x="22" y="33" width="1" height="1" fill="#222034" />
+            <rect x="23" y="33" width="1" height="1" fill="#222034" />
+            <rect x="25" y="33" width="1" height="1" fill="#222034" />
+            <rect x="26" y="33" width="1" height="1" fill="#222034" />
+            <rect x="27" y="33" width="1" height="1" fill="#222034" />
+            <rect x="28" y="33" width="1" height="1" fill="#222034" />
+            <rect x="29" y="33" width="1" height="1" fill="#222034" />
+            <rect x="30" y="33" width="1" height="1" fill="#222034" />
+            <rect x="23" y="34" width="1" height="1" fill="#222034" />
+            <rect x="24" y="34" width="1" height="1" fill="#222034" />
+            <rect x="25" y="34" width="1" height="1" fill="#222034" />
+            <rect x="26" y="34" width="1" height="1" fill="#222034" />
+            <rect x="27" y="34" width="1" height="1" fill="#222034" />
+            <rect x="28" y="34" width="1" height="1" fill="#222034" />
+            <rect x="29" y="34" width="1" height="1" fill="#222034" />
+            <rect x="24" y="35" width="1" height="1" fill="#222034" />
+            <rect x="25" y="35" width="1" height="1" fill="#222034" />
+            <rect x="26" y="35" width="1" height="1" fill="#222034" />
+            <rect x="27" y="35" width="1" height="1" fill="#222034" />
+            <rect x="28" y="35" width="1" height="1" fill="#222034" />
+            <rect x="25" y="36" width="1" height="1" fill="#222034" />
+            <rect x="26" y="36" width="1" height="1" fill="#222034" />
+            <rect x="27" y="36" width="1" height="1" fill="#222034" />
+        </svg>
+    </div>
+
+    <div class="title-screen-container-outer">
+        <div class="title-screen-container-inner">
+            <div class="card"><img src="images/card-standin.png" alt=""></div>
+            <div class="copyright-info">Copyright 2019. Made by <a href="#" target="_blank">Zano</a> and <a href="#"
+                    target="_blank">tasmto</a> and Liv</div>
+        </div>
+    </div>
+
+
+    <audio autoplay loop id="soundtrack">
+        <source src="audio/HolFix - Good Old Times.mp3" type="audio/mpeg">
+    </audio>
+
+</body>
+
+</html>

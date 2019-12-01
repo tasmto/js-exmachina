@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Popup</title>
+
+    <link href="https://fonts.googleapis.com/css?family=Press+Start+2P&display=swap" rel="stylesheet"> 
+
+    <style>
+        body {
+            margin: 0;
+            background: grey;
+            font-family: 'Press Start 2P', cursive;
+            font-size: 14px;
+            line-height: 1.6;
+        }
+        *{
+            font-family: 'Press Start 2P', cursive;
+            color: #4F4F4F;
+        }
+        .grey-text{
+            color: #828282;
+        }
+
+        .popup-box-container--outer {
+            height: 100vh;
+            width: 100vw;
+            display: grid;
+            justify-content: center;
+            align-items: center;
+            
+        }
+        .popup-box-container--outer[aria-expanded="false"] {
+            display: none;
+        }
+
+        .popup-box-container--inner {
+            height: 70%;
+            width: 70%;
+            min-width: 400px;
+            min-height: 400px;
+            box-sizing: border-box;
+            background: #ffffff;
+            border-radius: 45px;
+            padding: 7%;
+            align-self: center;
+            justify-self: center;
+            z-index: 2;
+            display: grid;
+            justify-content: start;
+            align-items: start;
+        }
+        .popup-box-container--inner > *{
+            justify-content: start;  
+        }
+
+        .popup-box-container--inner > .lets-go-button{
+            justify-self: start;
+            align-self: end;
+            background: none;
+            padding: 0;
+            border: 0;
+            font-size: 14px;
+            color: #828282;
+        }
+
+
+
+
+        .popup-box-container--outer[aria-expanded="true"] >.popup-box--overlay{
+            background: #00000052;
+            display: block;
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100vw;
+            height: 100vh;
+        }
+    </style>
+</head>
+
+<body>
+
+    <div class="popup-box-container--outer" aria-expanded="true">
+        <div class="popup-box-container--inner">
+            <p>Through the use of a self envoking function, your mission is to add the Array items into an unordered
+                list in the DOM<br/><br/> <span class="grey-text">i.e. (function () {blah blah blah})</span></p>
+            
+            <button class="lets-go-button">lets go! &#9654;</button>
+        </div>
+        <div class="popup-box--overlay" onclick=" currentPopup = this.parentElement; openClosePopup()" ></div>
+    </div>
+
+
+    <script>
+        let currentPopup;
+
+        const openClosePopup = () => {
+           let status = currentPopup.getAttribute('aria-expanded');
+            
+
+           if (status = true) {
+               currentPopup.setAttribute('aria-expanded', false);
+               }
+               else if (status = false) {
+                currentPopup.setAttribute('aria-expanded', true);
+               }
+               else{return;}
+        }
+        
+    </script>
+
+</body>
+
+</html>

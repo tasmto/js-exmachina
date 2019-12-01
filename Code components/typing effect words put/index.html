@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Typewriter</title>
+
+    <style>
+
+        div.typewriter {
+            width: 1000px;
+            height: 120px;
+            background: #6495ed;
+            border: 1px solid black;
+            border-radius: 14px;
+            padding: 0 10px 20px 0;
+            opacity: 0.90;
+            filter: alpha(opacity=90);
+            font-family: monospace;
+        }
+
+        div.typewriter p {
+            padding: 10px 10px;
+            color: black;
+        }
+    </style>
+
+    <style>
+        .continue {
+            display: flex;
+            justify-content: flex-end;
+            text-decoration: none;
+            color: #000000;
+        }
+
+        a.continue:hover {
+            color: #ffd700;
+        }
+
+    </style>
+</head>
+
+<body>
+
+<div class="typewriter">
+    <p id="text"></p>
+    <button onclick="typeWriter()" class="next">Activate</button>
+
+    <script defer>
+        let i = 0;
+        let txt = `The first day on the job! Time to develop some JavaScript! jgjvcyujg iuik gfhy  fk jy dhyhlogyumdy ghhku,fthnf ukj`;
+        let speed = 30;
+
+        function typeWriter() {
+            if (i < txt.length) {
+                document.getElementById("text").innerHTML += txt.charAt(i);
+                i++;
+                setTimeout(typeWriter, speed);
+            }
+        }
+
+        function moreWords() {
+            txt += "This is another sentence";
+            typeWriter();
+        }
+
+        function faster(amount) {
+            document.getElementById("text").innerHTML = txt;
+        }
+
+    </script>
+
+    <div>
+        <a class="continue"
+           href="#">Continue<img src="../pictures/play-button.gif" height="16" width="16"
+                                 style="padding-left: 6px" alt="play button"/></a>
+    </div>
+
+    <button onclick="moreWords()">Addd more!</button>
+    <button onclick="faster(0.1)">Faster!</button>
+</div>
+
+</body>
+</html>

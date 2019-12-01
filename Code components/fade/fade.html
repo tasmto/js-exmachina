@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<div id="fadeBox">
+    <span><img src="../pictures/google-pic.jpg" height="441" width="740" alt="google pixel"/></span>
+</div>
+
+<button id="buttonFade" type="button">Fade</button>
+<button id="buttonUnfade" type="button">UnFade</button>
+
+<script>
+    const fadeBox = document.getElementById("fadeBox");
+    const buttonFade = document.getElementById("buttonFade");
+    const buttonUnfade = document.getElementById("buttonUnfade");
+
+    fadeBox.style.opacity = 1;
+    fadeBox.style.transition = "opacity 1s";
+
+    const f_fade = (() => {
+        fadeBox.style.opacity = 0;
+    });
+
+    const f_unfade = (() => {
+        fadeBox.style.opacity = 1;
+    });
+
+    buttonFade.addEventListener("click", f_fade, false);
+    buttonUnfade.addEventListener("click", f_unfade, false);
+</script>
+</body>
+</html>

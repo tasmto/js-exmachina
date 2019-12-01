@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" href="style.css">
+
+    <title>Code editor</title>
+</head>
+
+
+<body>
+
+<div class="main-editor">
+    <div class="first" contenteditable="true">CODE HERE
+        <div>
+            <button class="btn" contenteditable="false">submit!</button>
+        </div>
+    </div>
+    <iframe class="second"></iframe>
+</div>
+
+<script>
+    const first = document.querySelector(".first");
+    const iframe = document.querySelector("iframe");
+    const btn = document.querySelector("button");
+
+    btn.addEventListener("click", () => {
+        let html = first.textContent;
+        iframe.src = "data:text/html;charset=utf-8," + encodeURI(html);
+    });
+
+
+    first.addEventListener('keyup', () => {
+        let html = first.textContent;
+        iframe.src = "data:text/html;charset=utf-8," + encodeURI(html);
+    });
+
+    first.addEventListener("paste", function (e) {
+        e.preventDefault();
+        let text = e.clipboardData.getData("text/plain");
+        document.execCommand("insertText", false, text);
+    });
+</script>
+
+
+</body>
+</html>
