@@ -6,6 +6,8 @@
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <link rel="stylesheet" href="style.css">
 
+
+
     <title>Code editor</title>
 </head>
 
@@ -13,31 +15,39 @@
 <body>
 
 <div class="main-editor">
-    <div class="first" contenteditable="true">CODE HERE
-        <div>
-            <button class="btn" contenteditable="false">submit!</button>
-        </div>
-    </div>
+    <div class="editor" contenteditable="true"
+    data-prerequisite="
+    <li>Hi this needs to be in</li>
+    "
+    
+    ></div>
     <iframe class="second"></iframe>
 </div>
 
+    <button class="code-editor-btn" contenteditable="false">submit!</button>
+
+
 <script>
-    const first = document.querySelector(".first");
+
+    const editor = document.querySelector(".editor");
     const iframe = document.querySelector("iframe");
-    const btn = document.querySelector("button");
+    const codeSubmitBtn = document.querySelector(".code-editor-btn");
 
-    btn.addEventListener("click", () => {
-        let html = first.textContent;
-        iframe.src = "data:text/html;charset=utf-8," + encodeURI(html);
+
+    // WHEN YOU CLICK ON THE BUTTON
+    codeSubmitBtn.addEventListener("click", () => {
+        let html = editor.textContent;
+        iframe.src = `data:text/html;charset=utf-8, ${encodeURI(html)}`;
     });
 
-
-    first.addEventListener('keyup', () => {
-        let html = first.textContent;
-        iframe.src = "data:text/html;charset=utf-8," + encodeURI(html);
+    //THIS IS WHAT'S AUTOMAGICALLY MAKING THE CODE APPEAR AS YOU TYPE
+    editor.addEventListener('keyup', () => {
+        let html = editor.getAttribute('data-prerequisite') + editor.textContent;
+        iframe.src = `data:text/html;charset=utf-8, ${encodeURI(html)}`;
     });
 
-    first.addEventListener("paste", function (e) {
+    // LETS SAY THE USER PASTES IN CODE FOR WHATEVER REASON
+    editor.addEventListener("paste", function (e) {
         e.preventDefault();
         let text = e.clipboardData.getData("text/plain");
         document.execCommand("insertText", false, text);

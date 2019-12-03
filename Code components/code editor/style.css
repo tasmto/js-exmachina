@@ -2,14 +2,13 @@
     box-sizing: border-box;
     padding: 0;
     margin: 0;
+    font-family: "Press Start 2P" !important;
+    word-wrap: break-word;
 }
 
 
-.btn {
-    font-family: "Press Start 2P" !important;
-    margin: 400px 0 0 150px;
-    height: 2.2rem;
-    width: 10rem;
+.code-editor-btn {
+    padding: 20px 30px;
     background: #56CCF2;
     color: #ffffff;
     font-size: 0.8rem;
@@ -18,9 +17,18 @@
     border: none;
     position: absolute;
     bottom: 10%;
+    left: 25%;
+    transform: translateX(-50%);
+
+    /*MAKE BUTTON UNSELECTABLE*/
+    user-select: none;
+        -moz-user-select: none;
+        -khtml-user-select: none;
+        -webkit-user-select: none;
+        -o-user-select: none;
 }
 
-.btn:hover {
+.code-editor-btn:hover {
     background: blue;
 }
 
@@ -34,12 +42,11 @@
     align-items: center;
 }
 
-.first {
+.editor {
     background: radial-gradient(50% 50% at 50% 50%, #444444 0%, #4B4B4B 100%);
     width: 50%;
-    overflow-x: hidden;
     overflow-y: auto;
-    white-space: pre;
+    white-space: break-spaces;
     outline: none;
     padding: 3rem;
     height: 100%;
@@ -50,7 +57,8 @@
     background-color: rgba(255, 131, 131, 0.79);
     width: 50%;
     overflow-y: auto;
-    white-space: pre;
+    white-space: break-spaces;
+    font-family: "Press Start 2P" !important;
     height: 100%;
     padding: 3rem;
 }
