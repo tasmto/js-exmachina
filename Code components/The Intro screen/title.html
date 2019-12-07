@@ -13,6 +13,19 @@
         width: 100vw;
         height: 100vh;
         margin: 0;
+        font-family: "Press Start 2P";
+        font-size: 0.6rem;
+    }
+
+    .copyright-info {
+        color: #ffe5ff;
+        opacity: 0.8;
+        margin-top: 20px;
+    }
+
+    .name {
+        color: #000000;
+        opacity: 0.8;
     }
 
     /*DELETE THIS END*/
@@ -21,14 +34,14 @@
         position: fixed;
         top: 2%;
         right: 2%;
-    } 
+        padding: 40px;
+    }
     #game-controls > svg{
     }
 
     #soundtrack{
-
     }
-    
+
     .title-screen-container-outer {
         background: linear-gradient(300.18deg, #93D5EA 11.02%, rgba(187, 238, 255, 0) 87.91%), #88C6DA;
         height: 100%;
@@ -37,8 +50,7 @@
 
     .title-screen-container-inner {
         margin: auto;
-        background: url(images/js-ex-machina-title-screen-repeating-pattern.png);
-        background-repeat: repeat 0 0;
+        background: url(images/js-ex-machina-title-screen-repeating-pattern.png) repeat 0 0;
         margin: 0;
         text-align: center;
         height: 100vh;
@@ -70,22 +82,8 @@
     }
 </style>
 
-<script defer>
-
-(function () {
-    const gameControls = document.getElementById('game-controls');
-    console.log(gameControls);
-   
-
-})
-
-var name = prompt('What is your name');
-alert('Hi ' + name);
-
-</script>
-
 <body>
-    <div id="game-controls">
+    <div id="game-controls" onclick="setAudio()">
         <?xml version="1.0" encoding="UTF-8" ?>
         <svg version="1.1" width="56" height="56" xmlns="http://www.w3.org/2000/svg">
             <rect x="24" y="33" width="1" height="1" fill="#D9A066" />
@@ -219,16 +217,54 @@ alert('Hi ' + name);
 
     <div class="title-screen-container-outer">
         <div class="title-screen-container-inner">
-            <div class="card"><img src="images/card-standin.png" alt=""></div>
-            <div class="copyright-info">Copyright 2019. Made by <a href="#" target="_blank">Zano</a> and <a href="#"
-                    target="_blank">tasmto</a> and Liv</div>
+            <div class="card"><img src="images/card-standin.png" alt="">
+            </div>
+            <div class="copyright-info">Copyright 2019. Made by <a class="name" href="#" target="_blank">Zano</a> and <a class="name" href="#"
+                    target="_blank">tasmto</a> and <a class="name" href="#" target="_blank">Liv</a></div>
         </div>
     </div>
 
 
-    <audio autoplay loop id="soundtrack">
-        <source src="audio/HolFix - Good Old Times.mp3" type="audio/mpeg">
+    <audio controls autoplay>
+       <source src="audio/HolFix-Good-Old-Times.mp3" type="audio/mpeg">
     </audio>
+
+
+    <script defer>
+        const gameControls = document.getElementById('game-controls');
+        const audio = document.querySelector("audio");
+
+
+        window.onload= function () {
+            console.log(audio);
+            audio.play();
+        };
+
+        function setAudio() {
+            //ADD a CLASS IF IT HAS NONE AND REMOVE IT IF IT DOES
+            gameControls.classList.toggle('mute');
+
+            if (gameControls.classList.contains('mute')) {
+            playAudio();
+            }
+
+            else{
+                muteAudio();
+            }
+        }
+
+            function playAudio() {
+                audio.volume = 1;
+            }
+
+        function muteAudio () {
+            audio.volume = 0.0;
+        }
+
+
+
+    </script>
+
 
 </body>
 

@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>test</title>
+
+</head>
+<body>
+<audio controls autoplay id="soundtrack">
+    <source src="audio/HolFix-Good-Old-Times.mp3" type="audio/mpeg">
+</audio>
+
+<button onclick="muteAudio()">Click me !!!</button>
+
+<script>
+    const sound = document.getElementById('soundtrack');
+
+    function muteAudio () {
+   sound.volume = 0.2;
+    }
+</script>
+</body>
+</html>
