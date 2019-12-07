@@ -4,9 +4,7 @@
 const text = document.getElementById('text');
 const sceneImage = document.getElementById('scene-image');
 let sceneNmbr = 0;
-
 let i = 0;
-let txt = `The first day on the job! Time to develop some JavaScript!`;
 let speed = 30;
 
 //WHEN THE WINDOW LOADS START THE FIRST SCENE
@@ -24,7 +22,7 @@ function typeWriter() {
 
 function nextScene() {
 
-    //PLEASE CLEAR ALL THE TEXT
+    //CLEAR ALL THE TEXT
     text.innerHTML = '';
 
     //STOP THE TYPE WRITER LOOP
