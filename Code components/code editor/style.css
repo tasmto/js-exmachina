@@ -4,20 +4,21 @@
     margin: 0;
     font-family: "Press Start 2P" !important;
     word-wrap: break-word;
+    
 }
 
 
 .code-editor-btn {
     padding: 20px 30px;
-    background: #56CCF2;
-    color: #ffffff;
+    background: #ffffff;
+    color: #1e1e1e;
     font-size: 0.8rem;
     outline: none;
     cursor: pointer;
     border: none;
     position: absolute;
-    bottom: 10%;
-    left: 25%;
+    bottom: 5%;
+    left: 50%;
     transform: translateX(-50%);
 
     /*MAKE BUTTON UNSELECTABLE*/
@@ -30,35 +31,57 @@
 
 .code-editor-btn:hover {
     background: blue;
+    color: #ffffff;
 }
 
+.main-editor--outer {
+    position: relative;
+    width: 100vw;
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background: linear-gradient(300.18deg, #93D5EA 11.02%, rgba(187, 238, 255, 0) 87.91%), #88C6DA;
+}
 
 .main-editor {
     display: flex;
-    width: 100%;
+    width: 80vw;
     position: fixed;
-    height: 100vh;
+    height: 80vh;
     justify-content: center;
     align-items: center;
 }
 
 .editor {
     background: radial-gradient(50% 50% at 50% 50%, #444444 0%, #4B4B4B 100%);
-    width: 50%;
+    width: 50vw;
     overflow-y: auto;
     white-space: break-spaces;
     outline: none;
     padding: 3rem;
     height: 100%;
-    color: #E0E0E0;
+    display: block;
 }
 
 .second {
     background-color: rgba(255, 131, 131, 0.79);
-    width: 50%;
+    color: #1e1e1e;
+    width: 50vw;
     overflow-y: auto;
     white-space: break-spaces;
     font-family: "Press Start 2P" !important;
     height: 100%;
     padding: 3rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
 }
+
+.hint-txt {
+    font-weight: 900;
+    margin-top: 15px;
+}
+
+

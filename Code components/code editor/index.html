@@ -1,12 +1,14 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <link rel="stylesheet" href="style.css">
 
-
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/ace/1.4.7/ace.js"
+        integrity="sha256-C7DTYRJLG+B/VEzHGeoPMw699nsTQYPAXHKXZb+q04E=" crossorigin="anonymous"></script>
 
     <title>Code editor</title>
 </head>
@@ -14,46 +16,76 @@
 
 <body>
 
-<div class="main-editor">
-    <div class="editor" contenteditable="true"
-    data-prerequisite="
-    <li>Hi this needs to be in</li>
-    "
-    
-    ></div>
-    <iframe class="second"></iframe>
-</div>
+    <div class="main-editor--outer">
+        <div class="main-editor">
+            <div class="editor" id="editor">function () {console.log(3);}</div>
+            <div class="second instructions" data-solution="console.log(3n)" data-hint="This is the hint">
+                <p>Make sure you have the following: </br>a console log of 1</p>
+            </div>
 
-    <button class="code-editor-btn" contenteditable="false">submit!</button>
-
-
-<script>
-
-    const editor = document.querySelector(".editor");
-    const iframe = document.querySelector("iframe");
-    const codeSubmitBtn = document.querySelector(".code-editor-btn");
+            <button class="code-editor-btn" contenteditable="false">submit!</button>
+        </div>
+    </div>
 
 
-    // WHEN YOU CLICK ON THE BUTTON
-    codeSubmitBtn.addEventListener("click", () => {
-        let html = editor.textContent;
-        iframe.src = `data:text/html;charset=utf-8, ${encodeURI(html)}`;
-    });
 
-    //THIS IS WHAT'S AUTOMAGICALLY MAKING THE CODE APPEAR AS YOU TYPE
-    editor.addEventListener('keyup', () => {
-        let html = editor.getAttribute('data-prerequisite') + editor.textContent;
-        iframe.src = `data:text/html;charset=utf-8, ${encodeURI(html)}`;
-    });
 
-    // LETS SAY THE USER PASTES IN CODE FOR WHATEVER REASON
-    editor.addEventListener("paste", function (e) {
-        e.preventDefault();
-        let text = e.clipboardData.getData("text/plain");
-        document.execCommand("insertText", false, text);
-    });
-</script>
+    <script>
+
+
+        const editor = document.querySelector(".editor");
+        const codeSubmitBtn = document.querySelector(".code-editor-btn");
+        const instructions = document.querySelector('.instructions');
+
+
+        let e = ace.edit('editor');
+        e.getSession().setMode('ace/mode/javascript');
+        e.setTheme('ace/theme/terminal');
+        e.getSession().setTabSize('2');
+
+        // WHEN YOU CLICK ON THE BUTTON
+        codeSubmitBtn.addEventListener('click', () => {
+            let html = e.getValue();
+
+            validateAnswer(html);
+        });
+
+        function validateAnswer(userAnswer) {
+            const answer = instructions.getAttribute('data-solution');
+
+            if (userAnswer === null) {
+                alert('please set an answer')
+            } else if (userAnswer.includes(answer)) {
+                alert('well done');
+            } else {
+                alert('sorry, no...');
+                printHint();
+            }
+        }
+
+        function printHint() {
+            const hint = instructions.getAttribute('data-hint');
+            const p = document.createElement('p');
+            const hintTxt = document.createTextNode(`hint: ${hint}`);
+
+            const hintTxtExists = instructions.querySelector('.hint-txt');
+
+            if (!(hintTxtExists === null)) {
+                hintTxtExists.innerHTML = hint;
+            } else {
+                p.setAttribute('class', 'hint-txt')
+                p.appendChild(hintTxt);
+                instructions.appendChild(p);
+            }
+
+
+        }
+
+
+
+    </script>
 
 
 </body>
+
 </html>
