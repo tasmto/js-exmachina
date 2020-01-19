@@ -173,6 +173,87 @@ div.typewriter {
     color: #0402ff;
 }
 
+/*THE POPUP */
+
+h1 {
+    font-size: 1em;
+    text-align: center;
+    color: #828282;
+}
+
+h2 {
+    font-size: 1em;
+    text-align: center;
+    color: #4F4F4F;
+}
+
+h3 {
+    font-size: 1em;
+    text-align: center;
+    color: #828282;
+}
+
+a {
+    text-decoration: none;
+    color: #fff;
+}
+
+
+.popup {
+    position: fixed;
+    padding: 150px;
+    width: 80vw;
+    border-radius: 20px;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background: #ffffff;
+    visibility: hidden;
+    opacity: 0;
+    -webkit-transition: opacity .5s, visibility 0s linear .5s;
+    transition: opacity .5s, visibility 0s linear .5s;
+    z-index: 1;
+}
+
+.popup.open {
+    visibility: visible;
+    opacity: 1;
+    -webkit-transition-delay: 0s;
+    transition-delay: 0s;
+}
+
+
+.popup-close {
+    position: absolute;
+    padding: 10px;
+    max-width: 500px;
+    border-radius: 10px;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background: rgba(255, 255, 255, .9);
+}
+
+.popup .close {
+    position: absolute;
+    right: 5px;
+    top: 5px;
+    padding: 5px;
+    color: #000;
+    transition: color .3s;
+    font-size: 2em;
+    line-height: .6em;
+    font-weight: bold;
+}
+
+.popup .close:hover {
+    color: #00E5EE;
+}
+
+
+
+/*THE POP US END */
+
 
 
 /*CODE EDITOR*/
