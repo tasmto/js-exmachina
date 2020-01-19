@@ -71,14 +71,12 @@
             const hintTxtExists = instructions.querySelector('.hint-txt');
 
             if (!(hintTxtExists === null)) {
-                hintTxtExists.innerHTML = hint;
+                hintTxtExists.innerHTML = `hint: ${hint}`;
             } else {
                 p.setAttribute('class', 'hint-txt')
                 p.appendChild(hintTxt);
                 instructions.appendChild(p);
             }
-
-
         }
 
 
