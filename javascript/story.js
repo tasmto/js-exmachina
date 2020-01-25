@@ -47,7 +47,7 @@ function nextScene() {
 
     else {
         //MOVE TO THE CODE EDITOR
-        window.parent.nextStage();
+        nextStage();
     }
 
 }
