@@ -4,7 +4,7 @@ const audio = document.querySelector("audio");
 
 function startMusic() {
     audio.play();
-    audio.volume = 0.5;
+
 
     gameControls.setAttribute('onclick', 'lowerVolume()');
 }

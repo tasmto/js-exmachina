@@ -13,6 +13,8 @@ e.getSession().setMode('ace/mode/javascript');
 e.setTheme('ace/theme/terminal');
 e.getSession().setTabSize('2');
 
+e.setOption("wrap", true)
+
 // WHEN YOU CLICK ON THE BUTTON
 codeSubmitBtn.addEventListener('click', () => {
     let html = e.getValue();
@@ -26,10 +28,9 @@ function validateAnswer(userAnswer) {
     if (userAnswer === null) {
         alert('please set an answer')
     } else if (userAnswer.includes(answer)) {
-       alert('well done');
        window.parent.nextStage();
     } else {
-        alert('sorry, no...');
+        alert('Try again.');
         printHint();
     }
 }
