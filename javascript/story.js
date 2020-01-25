@@ -67,8 +67,6 @@ function nextText() {
 function nextImage() {
     sceneImage.src = sceneImage.getAttribute(`data-image-src-${sceneNmbr}`);
 
-    console.log(sceneImage.src)
-
     if (sceneImage.src.includes("black.png") ){
         black()
     }

@@ -28,7 +28,7 @@ function validateAnswer(userAnswer) {
     if (userAnswer === null) {
         alert('please set an answer')
     } else if (userAnswer.includes(answer)) {
-       window.parent.nextStage();
+       nextStage();
     } else {
         alert('Try again.');
         printHint();
