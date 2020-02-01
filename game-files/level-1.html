@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Level 1</title>
+    <link rel="stylesheet" href="../css/styles.css">
+    <link href="https://fonts.googleapis.com/css?family=Press+Start+2P&display=swap" rel="stylesheet">
+    <script defer src="../javascript/story.js"></script>
+    <script defer>
+        function nextStage() {
+            window.open(`../game-files/popup-1.html`, '_self');
+        }
+
+    </script>
+
+</head>
+
+<body>
+
+
+    <div class="fade_to_black"></div>
+
+    <div id="story-image-container">
+        <img id="scene-image" src="" data-image-src-0="../images/alarm-clock.gif"
+            data-image-src-1="../images/alarm-clock.gif" data-image-src-2="../images/black.png"
+            data-image-src-3="../images/sink.png" data-image-src-4="../images/sink.png" />
+
+    </div>
+
+    <div class="typewriter">
+
+        <div class="typewriter--inner">
+            <p id="text" data-text-0="AAHHH!!!           I'm going to be late!"
+                data-text-1="And today is my first day at CODE-SPACE!!!"
+                data-text-2="Exposition      exposition      exposition...                I would press [X] to skip this part!]"
+                data-text-3="I need to get ready!      First I need to brush my teeth..."
+                data-text-4="Oh, oh...           I forgot which of the following items I use to brush my teeth...           Can you help me?">
+            </p>
+
+            <div class="continue-btn--container" onclick=nextScene();>
+                <a class="continue" href="#">Continue &#9658;</a>
+            </div>
+
+        </div>
+
+    </div>
+
+</body>
+
+</html>

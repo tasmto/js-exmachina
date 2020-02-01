@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" href="../css/styles.css">
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/ace/1.4.7/ace.js"
+        integrity="sha256-C7DTYRJLG+B/VEzHGeoPMw699nsTQYPAXHKXZb+q04E=" crossorigin="anonymous"></script>
+
+        <script defer src="../javascript/code-editor.js"></script>
+
+        <script defer>
+            function nextStage() {
+                window.open(`../game-files/end-screen.html`, '_self');
+            }
+    
+        </script>
+
+    <title>Code editor</title>
+</head>
+
+
+<body>
+
+    <div class="main-editor--outer">
+        <div class="main-editor">
+            <div class="editor" id="editor">const actions = {
+seniorDev: "Come to my office or else you're fired!", 
+jen: 'You can come here of whateves',
+olivia: 'Breath of the wild sucks!',
+dave: null
+};
+
+function callSeniorDev () {
+ '...'
+}
+
+
+
+</div>
+            <div class="second instructions" data-solution="function callOlivia" data-hint="It has to look like this:
+call`Objectname` then access the object">
+                <p>It must be exactly Like the example given; you have to make functions for each minion...</p>
+            </div>
+
+            <button class="code-editor-btn" contenteditable="false">submit!</button>
+        </div>
+    </div>
+
+
+
+
+</body>
+
+</html>

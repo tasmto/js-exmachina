@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <link href="../css/styles.css" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Press+Start+2P&display=swap" rel="stylesheet">
+
+    <script defer src="../javascript/popup.js"></script>
+
+    <script defer>
+        function nextStage() {
+            window.open(`../game-files/level-2-battle-screen.html`, '_self');
+        }
+
+    </script>
+
+</head>
+
+<body class="moving-background">
+
+<div>
+    <div id="popup" class="popup">
+        <a href="#" class="close" onclick="nextStage();">&times;</a>
+        <p>Your mission is to write a immediately invoked function expression (IIFE) that makes it so that when the button is pressed it launches the function launchPeter();</p>
+    </br>
+    <p class="light">i.e. (function () {blah blah blah})</p>
+        <a href="#" class="close-popup"></a>
+    </div>
+</div>
+
+</body>
+</html>

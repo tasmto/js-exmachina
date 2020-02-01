@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Level 4</title>
+    <link rel="stylesheet" href="../css/styles.css">
+    <link href="https://fonts.googleapis.com/css?family=Press+Start+2P&display=swap" rel="stylesheet">
+    <script defer src="../javascript/story.js"></script>
+
+    <script defer>
+        function nextStage() {
+            window.open(`../game-files/popup-7.html`, '_self');
+        }
+
+    </script>
+</head>
+
+<body id="body">
+<div class="fade_to_black"></div>
+
+<div id="story-image-container">
+    <img id="scene-image" src=""
+         data-image-src-0 = "../images/black.png"
+         data-image-src-1 = "../images/black.png"
+         data-image-src-2 = "../images/j-2.gif"
+         data-image-src-3 = "../images/j-3.gif"
+
+    />
+
+</div>
+
+
+<div class="typewriter">
+
+    <div class="typewriter--inner">
+        <p id="text"
+           data-text-0 ="... Jeez"
+           data-text-1 ="This is crazy...                        (just then another shadow looms over you)."
+           data-text-2="Disinterested Jen: Hey Intern...        I dont want to have THE BOSS shout at me         so can you help me?"
+           data-text-3="Disinterested Jen: Can you code me a component that displays pop up messages from an object I made?"
+        ></p>
+
+
+        <div class="continue-btn--container" onclick=nextScene();>
+            <a class="continue"
+               href="#">Continue &#9658;</a>
+        </div>
+
+    </div>
+
+</div>
+
+</body>
+</html>

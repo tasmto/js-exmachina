@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Level 5</title>
+    <link rel="stylesheet" href="../css/styles.css">
+    <link href="https://fonts.googleapis.com/css?family=Press+Start+2P&display=swap" rel="stylesheet">
+    <script defer src="../javascript/story.js"></script>
+
+    
+    <script defer>
+        function nextStage() {
+            window.open(`../game-files/popup-8.html`, '_self');
+        }
+
+    </script>
+</head>
+<body>
+<div class="fade_to_black"></div>
+
+<div id="story-image-container">
+    <img id="scene-image" src=""
+         data-image-src-0 = "../images/black.png"
+         data-image-src-1 = "../images/door-1.png"
+         data-image-src-2 =  "../images/door-2.gif"
+         data-image-src-3 = "../images/l-1.gif"
+         data-image-src-4 = "../images/l-1.gif"
+         data-image-src-5 = "../images/black.png"
+         data-image-src-6 = "../images/l-3.gif"
+         data-image-src-7 = "../images/l-4.gif"
+         data-image-src-8= "../images/l-3.gif"
+    />
+
+</div>
+
+
+<div class="typewriter">
+
+    <div class="typewriter--inner">
+        <p id="text"
+           data-text-0 ="Oof! I apparently did something       so bad I have to meet THE BOSS now... "
+           data-text-1 ="If this were a game I guess this would be the boss level...              Here we go..."
+           data-text-2="Creek..."
+           data-text-3="THE BOSS: So you’re the intern... I heard a lot about you..."
+           data-text-4="..."
+           data-text-5="(The boss moves from her desk)"
+           data-text-6="THE BOSS: Hmmm, you can call me Liv                       kid I want you to do somthing for me"
+           data-text-7="Liv:I cant do this screaming to my            minions thing anymore... "
+
+           data-text-8="I have an object containing all the employee’s details. When I click...                      you know what; just read the next screen.."
+
+
+        ></p>
+
+
+        <div class="continue-btn--container" onclick=nextScene();>
+            <a class="continue"
+               href="#">Continue &#9658;</a>
+        </div>
+
+    </div>
+
+</div>
+
+</body>
+</html>
